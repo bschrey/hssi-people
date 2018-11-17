@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/bschrey/hssi-people/issues"
   },
-  "homepage": "https://github.com/bschrey/hssi-people#readme"
+  "homepage": "https://github.com/bschrey/hssi-people#readme",
+  "dependencies": {
+    "restify": "^7.2.3"
+  }
 }
