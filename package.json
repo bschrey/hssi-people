@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node ./server.js"
+    "start": "MONGODB_URI=mongodb://localhost:27017/people node ./server.js"
   },
   "repository": {
     "type": "git",
@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/bschrey/hssi-people#readme",
   "dependencies": {
+    "lodash": "^4.17.11",
+    "mongoose": "^5.3.12",
     "restify": "^7.2.3"
   }
 }

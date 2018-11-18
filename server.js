@@ -43,7 +43,7 @@ server.get('/v1/person/:key', async (req, res, next) => {
 
 server.post('/v1/person', async (req, res, next) => {
     try {
-		let person = await people.create(req.body.key, req.body.first, req.body.last, req.body.age, req.body.gender);
+		let person = await people.create(req.body.first, req.body.last, req.body.age, req.body.gender);
 		console.log(JSON.stringify(person));
 		res.send(200, JSON.stringify(person));
 	} catch(e) {
