@@ -2,10 +2,8 @@ const {ObjectID} = require('mongodb');
 const _ = require('lodash');
 
 const {mongoose} = require('../db/mongoose');
-const {PersonModel} = require('./people-mongoose-model.js');
+const {PersonModel} = require('./people-mongoose-model');
 const Person = require("./Person");
-
-let people = [];
 
 exports.update = function(key, first, last, age, gender) {
 	return new Promise((resolve, reject) => {
@@ -68,7 +66,7 @@ exports.read = function(key) {
 
 			PersonModel.findById(key).then((doc) => {
 				if(!doc) {
-					console.log('Id not found');
+					console.log('Key not found');
 				 	resolve(null);
 				}
 
@@ -91,14 +89,14 @@ exports.destroy = function(key) {
 	return new Promise((resolve, reject) => {
 		try {
 			if(!ObjectID.isValid(key)) {
-				console.log('ID not valid');
+				console.log('Key not valid');
 				reject(`Key is not valid.`);
 			}	
 
 			PersonModel.findByIdAndRemove(key).then((person) => {
 				if(!person) {
-					console.log('Id not removed');
-					reject(`Id not removed.`);
+					console.log('Key not removed');
+					reject(`Key not removed.`);
 				}
 				console.log(person);
 				resolve(person);
