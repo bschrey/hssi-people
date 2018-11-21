@@ -2,7 +2,6 @@
   "name": "people",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
     "start": "PORT=4000 MONGODB_URI=mongodb://localhost:27017/people node ./server.js"
   },
@@ -17,6 +16,7 @@
   },
   "homepage": "https://github.com/bschrey/hssi-people#readme",
   "dependencies": {
+    "mongodb": "^3.1.10",
     "mongoose": "^5.3.12",
     "restify": "^7.2.3"
   }
