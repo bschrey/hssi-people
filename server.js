@@ -78,6 +78,8 @@ server.del('/v1/person/:key', async (req, res, next) => {
 	}
 });
 
-server.listen(8080, function() {
-  console.log('%s listening at %s', server.name, server.url);
+const port = process.env.PORT || 3000;
+
+server.listen(port, function() {
+  console.log(`Listening on ${port}`);
 });

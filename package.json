@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "MONGODB_URI=mongodb://localhost:27017/people node ./server.js"
+    "start": "PORT=4000 MONGODB_URI=mongodb://localhost:27017/people node ./server.js"
   },
   "repository": {
     "type": "git",
