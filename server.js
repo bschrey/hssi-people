@@ -1,8 +1,12 @@
 const restify = require('restify');
+const logger = require('morgan');
+
 const pkg = require('./package.json');
 const people = require("./models/people");
 
 var server = restify.createServer();
+
+server.use(logger('dev'));
 
 server.use(restify.plugins.bodyParser());
 
