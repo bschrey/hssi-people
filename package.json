@@ -17,7 +17,6 @@
   },
   "homepage": "https://github.com/bschrey/hssi-people#readme",
   "dependencies": {
-    "lodash": "^4.17.11",
     "mongoose": "^5.3.12",
     "restify": "^7.2.3"
   }

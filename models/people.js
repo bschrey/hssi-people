@@ -1,5 +1,4 @@
 const {ObjectID} = require('mongodb');
-const _ = require('lodash');
 
 const {mongoose} = require('../db/mongoose');
 const {PersonModel} = require('./people-mongoose-model');
