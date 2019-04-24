@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "start": "PORT=4000 MONGODB_URI=mongodb://localhost:27017/people node ./server.js"
+    "start": "PORT=4000 MONGODB_URI=mongodb://localhost:27017/people node ./server.js",
+    "docker": "node ./server.js"
   },
   "repository": {
     "type": "git",
@@ -19,6 +20,7 @@
     "mongodb": "^3.1.10",
     "mongoose": "^5.3.12",
     "morgan": "^1.9.1",
-    "restify": "^7.2.3"
+    "restify": "^7.7.0",
+    "restify-cors-middleware": "^1.1.1"
   }
 }

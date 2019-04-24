@@ -1,0 +1,4 @@
+docker run -d -p 4000:4000 --network hssi-backend --name hssi-people bschrey/hssi-people:1.0.0
+
+docker start hssi-people
+docker stop hssi-people
